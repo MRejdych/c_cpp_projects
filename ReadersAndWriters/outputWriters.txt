@@ -1,0 +1,4 @@
+Sredni czas pracy pisarza 40.448 ms.
+Odchylenie std pisarza 56.0021 ms.
+Minimalny czas pracy pisarza 2 ms.
+Maksymalny czas pracy pisarza 393 ms.

@@ -1,0 +1,4 @@
+Sredni czas pracy czytelnika 6.236 ms.
+Odchylenie std czytelnika 3.44909 ms.
+Minimalny czas pracy czytelnika 2 ms.
+Maksymalny czas pracy czytelnika 55 ms.
