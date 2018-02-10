@@ -4,43 +4,36 @@
 #include <mutex>
 
 /*
-Algorytm dopuszcza do zasobu tylko jeden w¹tek w danym czasie.
-Wykorzystywany jako punkt odniesienia do oceny wydajnoœci pozosta³ych algorytmów.
+Algorytm dopuszcza do zasobu tylko jeden wï¿½tek w danym czasie.
+Wykorzystywany jako punkt odniesienia do oceny wydajnoï¿½ci pozostaï¿½ych algorytmï¿½w.
 */
 
 
-class MutexArbiter : public Arbiter		
-{
+class MutexArbiter : public Arbiter {
 private:
-	std::mutex* _mutex;
+    std::mutex *_mutex;
 public:
-	MutexArbiter()
-	{
-		_mutex = new std::mutex();
-	}
+    MutexArbiter() {
+        _mutex = new std::mutex();
+    }
 
-	virtual void startRead()
-	{
-		_mutex->lock();
-	}
+    virtual void startRead() {
+        _mutex->lock();
+    }
 
-	virtual void endRead()
-	{
-		_mutex->unlock();
-	}
+    virtual void endRead() {
+        _mutex->unlock();
+    }
 
-	virtual void startWrite()
-	{
-		_mutex->lock();
-	}
+    virtual void startWrite() {
+        _mutex->lock();
+    }
 
-	virtual void endWrite()
-	{
-		_mutex->unlock();
-	}
+    virtual void endWrite() {
+        _mutex->unlock();
+    }
 
-	~MutexArbiter()
-	{
-		delete _mutex;
-	}
+    ~MutexArbiter() {
+        delete _mutex;
+    }
 };
